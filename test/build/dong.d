@@ -1,0 +1,1 @@
+dong.o: dong.s

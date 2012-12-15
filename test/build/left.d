@@ -1,0 +1,1 @@
+left.o: left.s

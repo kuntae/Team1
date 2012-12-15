@@ -1,0 +1,1 @@
+mainup.o: mainup.s
