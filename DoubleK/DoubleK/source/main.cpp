@@ -25,7 +25,7 @@ typedef struct Dong{
 	int y;
 }Dong;
 
-void ret_next() // ¾Æ¹«µ¥³ª Touch¸¦ ´­·¯ ´ÙÀ½È­¸éÀ¸·Î ÀüÈ¯
+void ret_next() // ï¿½Æ¹ï¿½ï¿½ï¿½ï¿½ï¿½ Touchï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 {
 	while (1) {
 		if ( Stylus.Newpress )
@@ -34,7 +34,7 @@ void ret_next() // ¾Æ¹«µ¥³ª Touch¸¦ ´­·¯ ´ÙÀ½È­¸éÀ¸·Î ÀüÈ¯
 	}
 }
 
-int sel_menu() // Touch¸¦ ´­·¯ ¸Þ´º¸¦ ¼±ÅÃ. ¼±ÅÃµÈ ¸Þ´ºÀÇ ¹øÈ£¸¦ ¸®ÅÏ
+int sel_menu() // Touchï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ãµï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 {
 	int select=0;
 	while(1)
@@ -90,11 +90,11 @@ int main()
 
 		if(selnum == 1){
 GAMESTART:
-			//¹è°æÁöÁ¤
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			PA_EasyBgLoad(UP_SCREEN, BG2, backgroundUp);
 			PA_EasyBgLoad(DOWN_SCREEN, BG2, backgroundDown);
 			PA_WaitForVBL();
-			//Ä³¸¯ÅÍ ÁöÁ¤
+			//Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			PA_LoadSpritePal(DOWN_SCREEN,0,(void*)frames_Pal);
 			PA_CreateSprite(DOWN_SCREEN,0,(void*)frames_Sprite, OBJ_SIZE_16X32, 1, 0, 128-16, 192-32);
 
@@ -114,12 +114,12 @@ GAMESTART:
 			PA_DualCreateSprite(7,(void*)dong_Sprite, OBJ_SIZE_16X16,1,6,0,0);
 			PA_DualCreateSprite(8,(void*)dong_Sprite, OBJ_SIZE_16X16,1,6,0,0);
 
-			/* ÅØ½ºÆ® Ãâ·Â ºÎºÐ */
+			/* ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ */
 			PA_InitText(UP_SCREEN, BG0);
 			PA_SetTextTileCol(UP_SCREEN, 9);
 
-			PA_OutputText(DOWN_SCREEN, 1, 21, "°­Áø¼®");
-
+			PA_OutputText(DOWN_SCREEN, 1, 21, "test");
+			
 			//PA_DualSetSpriteAnim(2,2);
 			//PA_DualSetSpriteAnim(3,3);
 
@@ -221,32 +221,32 @@ GAMESTART:
 
 			}
 			PA_WaitForVBL();
-			PA_EasyBgLoad(UP_SCREEN, BG2, gameoverUp); //¹è°æÈ­¸é gameover
-			PA_EasyBgLoad(DOWN_SCREEN, BG2, gameoverDown); //¹è°æÈ­¸é gameover
-			PA_DeleteSprite(DOWN_SCREEN, 0); //»ç¶÷ Áö¿ì±â
-			PA_DualDeleteSprite(2);  //¶ËÁö¿ì±â
-			PA_DualDeleteSprite(3);  //¶ËÁö¿ì±â
-			PA_DualDeleteSprite(4);  //¶ËÁö¿ì±â
-			PA_DualDeleteSprite(5);  //¶ËÁö¿ì±â
-			PA_DualDeleteSprite(6);  //¶ËÁö¿ì±â
-			PA_DualDeleteSprite(7);  //¶ËÁö¿ì±â
-			PA_DualDeleteSprite(8);  //¶ËÁö¿ì±â
-			PA_InitText(UP_SCREEN, BG0); //ÅØ½ºÆ® ÃÊ±âÈ­
-			PA_SetTextTileCol(UP_SCREEN, 9); //ÅØ½ºÆ® »ö °ËÀº»ö ¼³Á¤
+			PA_EasyBgLoad(UP_SCREEN, BG2, gameoverUp); //ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ gameover
+			PA_EasyBgLoad(DOWN_SCREEN, BG2, gameoverDown); //ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ gameover
+			PA_DeleteSprite(DOWN_SCREEN, 0); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_DualDeleteSprite(2);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_DualDeleteSprite(3);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_DualDeleteSprite(4);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_DualDeleteSprite(5);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_DualDeleteSprite(6);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_DualDeleteSprite(7);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_DualDeleteSprite(8);  //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			PA_InitText(UP_SCREEN, BG0); //ï¿½Ø½ï¿½Æ® ï¿½Ê±ï¿½È­
+			PA_SetTextTileCol(UP_SCREEN, 9); //ï¿½Ø½ï¿½Æ® ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			PA_OutputText(UP_SCREEN, 10, 13, "score = %d",score);
-			ret_next(); //ÀÔ·Â´ë±â
+			ret_next(); //ï¿½Ô·Â´ï¿½ï¿½ï¿½
 			
-			//--------ÃÊ±âÈ­
-			if(score>=scoreRank1){ //1À§
+			//--------ï¿½Ê±ï¿½È­
+			if(score>=scoreRank1){ //1ï¿½ï¿½
 				scoreRank3=scoreRank2;
 				scoreRank2=scoreRank1;
 				scoreRank1=score;
 			}
-			else if(score>=scoreRank2){//2À§
+			else if(score>=scoreRank2){//2ï¿½ï¿½
 				scoreRank3=scoreRank2;
 				scoreRank2=score;
 			}
-			else if(score>=scoreRank3){//3À§
+			else if(score>=scoreRank3){//3ï¿½ï¿½
 				scoreRank3=score;
 			}
 			score=0;
@@ -257,22 +257,22 @@ GAMESTART:
 			dong5.x=rand()%255; dong5.y=0;
 			dong6.x=rand()%255; dong4.y=0;
 			dong7.x=rand()%255; dong5.y=0;
-			PA_InitText(UP_SCREEN, BG0); //ÅØ½ºÆ® ÃÊ±âÈ­
+			PA_InitText(UP_SCREEN, BG0); //ï¿½Ø½ï¿½Æ® ï¿½Ê±ï¿½È­
 			PA_WaitForVBL();
 
 
 		}
-		else if(selnum == 2){ //·ÀÅ© È­¸é
+		else if(selnum == 2){ //ï¿½ï¿½Å© È­ï¿½ï¿½
 			PA_WaitForVBL();
-			PA_EasyBgLoad(UP_SCREEN, BG2, rankingUp); //¹è°æÈ­¸é rankingUp
-			PA_EasyBgLoad(DOWN_SCREEN, BG2, rankingDown); //¹è°æÈ­¸é rankingDown
-			PA_InitText(UP_SCREEN, BG0); //ÅØ½ºÆ® ÃÊ±âÈ­
-			PA_SetTextTileCol(UP_SCREEN, 9); //ÅØ½ºÆ® »ö °ËÀº»ö ¼³Á¤
+			PA_EasyBgLoad(UP_SCREEN, BG2, rankingUp); //ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ rankingUp
+			PA_EasyBgLoad(DOWN_SCREEN, BG2, rankingDown); //ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ rankingDown
+			PA_InitText(UP_SCREEN, BG0); //ï¿½Ø½ï¿½Æ® ï¿½Ê±ï¿½È­
+			PA_SetTextTileCol(UP_SCREEN, 9); //ï¿½Ø½ï¿½Æ® ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			PA_OutputText(UP_SCREEN, 10, 13, "Rank 1! = %d",scoreRank1);
 			PA_OutputText(UP_SCREEN, 10, 15, "Rank 2! = %d",scoreRank2);
 			PA_OutputText(UP_SCREEN, 10, 17, "Rank 3! = %d",scoreRank3);
-			ret_next(); //ÀÔ·Â´ë±â
-			PA_InitText(UP_SCREEN, BG0); //ÅØ½ºÆ® ÃÊ±âÈ­
+			ret_next(); //ï¿½Ô·Â´ï¿½ï¿½ï¿½
+			PA_InitText(UP_SCREEN, BG0); //ï¿½Ø½ï¿½Æ® ï¿½Ê±ï¿½È­
 			goto GAMESTART;
 
 
